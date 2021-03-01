@@ -1,12 +1,4 @@
-> 最近需要使用opencv，就简单写了一个测试示例并记录下来。
-> 其中 QCamera 等相关的类同样可以实现当前功能。
-
-![界面展示.png](/img/bVcO5ON)
-
-![image.png](/img/bVcO5Xq)
-
-
-[仓库](https://github.com/cocowts/QtVideoCapture)
+[博客](https://segmentfault.com/a/1190000039308010)
 
 ### 功能
 * 支持有线或IP摄像头连接
