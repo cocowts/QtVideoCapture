@@ -53,6 +53,7 @@ private:
     QString m_savepath;
     QAtomicInteger<bool> m_isTakepicture = false;
     QAtomicInteger<bool> m_isTakevideo   = false;
+    QAtomicInteger<bool> m_isflip        = false;
 
     QScopedPointer<cv::VideoCapture> m_capture;
     QScopedPointer<cv::VideoWriter>  m_writer;

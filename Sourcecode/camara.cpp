@@ -38,6 +38,8 @@ void Camara::openCamara(const QString &url)
 {
     if (!m_capture->isOpened() && m_capture->open(url.toLatin1().data()))
     {
+        m_isflip = false;
+
         m_timer->start(33);
 
         emit statusChanged(true);
@@ -52,6 +54,8 @@ void Camara::openCamara(int index)
 {
     if (!m_capture->isOpened() && m_capture->open(index))
     {
+        m_isflip = true;
+
         m_timer->start(33);
 
         emit statusChanged(true);
@@ -80,7 +84,10 @@ void Camara::captureCamara()
 
     *m_capture >> originalframe;
 
-    cv::flip(originalframe, flipframe, 1);
+    if (m_isflip)
+        cv::flip(originalframe, flipframe, 1);
+    else
+        flipframe = originalframe;
 
     QImage img = QImage(flipframe.data, flipframe.cols, flipframe.rows, QImage::Format_RGB888).rgbSwapped();
 
