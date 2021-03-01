@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>src/camera.jpg</file>
+        <file>src/logo.ico</file>
+        <file>src/logo.png</file>
+    </qresource>
+</RCC>
